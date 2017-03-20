@@ -9,7 +9,7 @@ function which (name, script) {
   const pkg = require(`${name}/package.json`);
   const bin = pkg.bin[script];
 
-  if (!bin) { throw new Error('binary path for ${script} not found'); }
+  if (!bin) { throw new Error(`binary path for ${script} not found`); }
 
   return require.resolve(path.join(name, bin));
 }
