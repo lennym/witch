@@ -7,7 +7,11 @@ function which (name, script) {
   script = script || name;
 
   const pkg = require(`${name}/package.json`);
-  const bin = pkg.bin[script];
+  let bin = pkg.bin[script];
+
+  if (!bin && typeof pkg.bin === 'string') {
+    bin = pkg.bin;
+  }
 
   if (!bin) { throw new Error(`binary path for ${script} not found`); }
 
