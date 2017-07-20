@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/lennym/witch/issues"
   },
-  "homepage": "https://github.com/lennym/witch#readme"
+  "homepage": "https://github.com/lennym/witch#readme",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "findup": "^0.1.5"
+  }
 }
